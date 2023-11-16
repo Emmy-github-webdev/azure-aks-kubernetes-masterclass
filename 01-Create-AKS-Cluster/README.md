@@ -3,6 +3,26 @@
 ## Step-01: Introduction
 - Understand about AKS Cluster
 - Discuss about Kubernetes Architecture from AKS Cluster perspective
+- Azure Kubernetes Service (AKS) simplifies deploying a managed kubernetes cluster in Azure by offloading the opertaional overhead to Azure. As a hosted Kubernetes service, Azure handles critical tasks, like health monitoring and maintenance. When you create an AKS cluster, a control plan is automatically created and configured. This control plane is provided at no cost as a managed Azure resource abstracted from the user. You only pay for and manage the nodes attached to the AKS cluster.
+- You can create an AKS cluster using Azure CLI, Azure PowerShell, Azure Portal, and ARM templates, Bicep, Terraform.
+
+`
+Kubernetes is a rapidly evolving platform that manages container-based applications and their associated networking and storage components.
+`
+![Kubernetes Cluster Architecture](images/kubernates-cluster-architecture.png)
+
+`
+A kubernetes cluster is divided into two components:
+- _Control Plane_: prvides the core kubernetes service and orchestration of application workloads. The control panel includes the following core kubernetes components:
+1. _kube-apiservice_: The API server is how the underlying Kubernetes APIs are exposed. This component provides the interaction for management tools, such as _kubectl_ or the kubernetes dashboard.
+2. _etcd_: To maintain the state of your kubernetes cluster and configuration.
+3. _Kube-scheduler_: It determines what nodes can run the workload and starts them.
+4. _Kube_controller-Manager_: Oversees the smaller controllers that perform actions such as replicating pods and handling node operation.
+- _Nodes_: runs the application workload
+1. _Kubelet_: processes the orchestration requests from the control plane along with scheduling and running the requested containers.
+2. _kube-proxy_: handles virtual networkingon each node.
+3. _container runtime_: allows containerized application to run and interact with additional resources, such as the virtual network and storage 
+`
 
 ## Step-02: Create AKS Cluster
 - Create Kubernetes Cluster
