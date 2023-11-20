@@ -2,7 +2,9 @@
 
 ## Step-01: PODs Introduction
 - What is a POD ?
+_A pod is the smallest execution unit in Kubernetes, consisting of one or more containers._
 - What is a Multi-Container POD?
+_A multi-container pod is a pod in kubernetes that can run multiple containers together as a single unit._
 
 ## Step-02: PODs Demo
 ### Get Worker Nodes Status
