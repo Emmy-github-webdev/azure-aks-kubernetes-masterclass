@@ -46,6 +46,46 @@ kubectl get po
 kubectl get pods -o wide
 ```
 
+### Kubectl logs Command
+- Print the logs for a pod
+```
+kubectl logs <pod_name>
+```
+
+- Print the logs for the last 6 hours for a pod
+```
+kubectl logs --since=6h <pod_name>
+```
+
+- Get the most recent 50 lines of logs for a pod
+```
+kubectl logs --tail=50 <pod_name>
+```
+
+- Print the logs for a pod and follow new logs
+```
+kubectl logs -f <pod_name>
+```
+
+- Print the logs for a container in a pod
+```
+kubectl logs -c <container_name> <pod_name>
+```
+
+- Output the logs for a pod into a file named 'pod.log'
+```
+kubectl logs <pod_name> pod.log
+```
+
+- View the logs for a previously failed pod
+```
+kubectl logs --previous <pod_name>
+```
+
+- View the logs for all containers in a pod
+```
+kubectl logs <pod_name> --all-containers
+```
 ### What happened in the backgroup when above command is run?
 1. Kubernetes created a pod
 2. Pulled the docker image from docker hub
